@@ -1,0 +1,12 @@
+// Place all the styles related to the songs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#songs td {padding-right: 15px;}
+#new-song { padding-top: 20px;}
+
+.critic { color: black; background-color: #ddd; border:1px solid #ddd; border-radius:15px; padding: 3px; padding-left: 7px; padding-right: 7px; white-space: nowrap;}
+.critic:visited { color: black; }
+.selected { background-color: #3182bd; border:1px solid #3182bd;}
+
+#critic-list {padding-top: 10px; line-height: 2em;}

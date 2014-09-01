@@ -1,0 +1,19 @@
+<div id="critics" style="padding-top: 20px; width:90%; margin-left:auto; margin-right:auto; font-size: 1.2em;">
+<strong>Critics</strong><br/>
+<div id='critic-list'>
+<% selected_critics = []
+   selected_critics = params[:critics] unless params[:critics].empty? %>
+<% @songs_by_critic.each do |critic|
+  critic_class = "critic"
+  critic_class << " selected" if (params[:critics].empty? || params[:critics].include?(critic.critic))
+  if selected_critics.include?(critic.critic)
+    critics = selected_critics - [critic.critic]
+  else
+    critics = selected_critics + [critic.critic]
+  end
+  %>
+  <%= link_to critic.critic, {controller: 'venn', action: 'bubble', critics: critics}, {class: critic_class} %>&nbsp;&nbsp;
+<% end %>
+</div>
+</div>
+<%= render "bubble_chart" %>

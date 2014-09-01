@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vennsongs</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="container" id="container">
+<%= yield %>
+</div>
+</body>
+</html>

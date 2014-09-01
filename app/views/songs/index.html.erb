@@ -1,0 +1,16 @@
+<h1 >Listing <span id="song-count"><%= @songs.count %></span> songs</h1>
+
+<table id="songs">
+  <tr>
+    <th>Title</th>
+    <th>Artist</th>
+    <th>Critic</th>
+    <th>Rank</th>
+  </tr>
+
+<%= render @songs %>
+</table>
+
+<div id="new-song">
+  <%= link_to 'New Song', new_song_path, remote: true %>
+</div>
